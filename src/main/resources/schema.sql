@@ -1,0 +1,13 @@
+DROP TABLE IF EXISTS fileprocessingdb.filerecord;
+
+CREATE TABLE fileprocessingdb.filerecord  (
+     IDBBUNIQUE VARCHAR(40),
+	 LAST_UPDATE_DT VARCHAR(40),
+     PX_BID VARCHAR(40),
+     PX_MID  VARCHAR(40),
+     PX_ASK  VARCHAR(40),
+     PX_OPEN VARCHAR(40),
+     PX_HIGH VARCHAR(40),
+     PX_LOW VARCHAR(40),
+     PX_LAST VARCHAR(40)
+);
