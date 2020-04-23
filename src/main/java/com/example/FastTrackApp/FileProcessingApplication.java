@@ -18,15 +18,16 @@ public class FileProcessingApplication {
 		LOGGER.warn("Messages logged at WARN level");
 		LOGGER.info("Messages logged at INFO level");
 		LOGGER.debug("Messages logged at DEBUG level");
-	
+
 		csvFileGeneration();
 	}	
 	
-	public static void csvFileGeneration() {
+	public static void csvFileGeneration() throws Exception{
 		CsvFileGeneration fileGeneration = new CsvFileGeneration();
-		Thread t1 = new Thread(fileGeneration);
-		t1.start();
-	}
+		Thread thread1 = new Thread(fileGeneration);
+		thread1.start();
+		thread1.join();
+	}			
 }
 
 

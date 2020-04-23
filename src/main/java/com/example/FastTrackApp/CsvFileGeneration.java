@@ -18,8 +18,9 @@ class CsvFileGeneration implements Runnable {
 		Scanner myReader = null;
 		
 		try {		
-			 inputFile = new File("Equity_euro.px.20190626");
+			 inputFile = new File("src/main/resources/Equity_euro.px.20190626");
 			 fileWriter = new FileWriter("src/main/resources/data.csv");
+			 
 			 myReader = new Scanner(inputFile);
 	      
 	    while (myReader.hasNextLine()) {
@@ -42,5 +43,6 @@ class CsvFileGeneration implements Runnable {
 			e1.printStackTrace();
 		}
 	}	
+		System.out.println("\n\nData parsed and imported to data.csv file");
   }
 }
